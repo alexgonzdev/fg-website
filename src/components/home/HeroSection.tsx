@@ -1,0 +1,176 @@
+'use client';
+
+import Image from 'next/image';
+import { useRef, useEffect, useState } from 'react';
+import Button from '@/components/ui/Button';
+
+/**
+ * HeroSection component props interface
+ * Based on design document specification
+ */
+export interface HeroSectionProps {
+  /** Main headline text communicating F&G's premium B2B positioning */
+  headline: string;
+  /** Supporting subheadline text describing the company's core value proposition */
+  subheadline: string;
+  /** Call-to-action button text */
+  ctaText: string;
+  /** Call-to-action button link destination (typically to Contact section) */
+  ctaHref: string;
+  /** Background image URL (required) */
+  backgroundImage: string;
+  /** Optional background video URL (takes precedence over image when provided) */
+  backgroundVideo?: string;
+}
+
+/**
+ * HeroSection Component
+ * 
+ * The primary visual impact area on the homepage featuring:
+ * - Full viewport height (100vh) for immediate visual impact
+ * - Responsive minimum heights: 500px mobile, 550px tablet, 600px desktop
+ * - Background image with Next.js Image optimization for <3s load time
+ * - Optional video background with image fallback for performance
+ * - Gradient overlay for text readability
+ * - Preloaded critical images for performance
+ * - Compelling headline communicating F&G's premium B2B positioning
+ * - Subheadline describing the company's core value proposition
+ * - Primary CTA button directing visitors to the Contact section
+ * - Mobile-optimized padding and spacing
+ * - Touch-friendly CTA button (44px minimum height)
+ * 
+ * Requirements addressed:
+ * - Requirement 2.1: High-quality background image or video showcasing premium meat products
+ * - Requirement 2.2: Compelling headline communicating F&G's premium B2B positioning
+ * - Requirement 2.3: Subheadline describing the company's core value proposition
+ * - Requirement 2.4: Primary CTA button directing visitors to the Contact section
+ * - Requirement 2.5: Scale appropriately on mobile while maintaining visual impact
+ * - Requirement 2.6: Load within 3 seconds on standard broadband connections
+ * - Requirement 9.5: All interactive elements are easily tappable on touch devices (minimum 44px touch targets)
+ */
+export default function HeroSection({
+  headline,
+  subheadline,
+  ctaText,
+  ctaHref,
+  backgroundImage,
+  backgroundVideo,
+}: HeroSectionProps) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [videoLoaded, setVideoLoaded] = useState(false);
+  const [videoError, setVideoError] = useState(false);
+
+  // Handle video loading state
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video || !backgroundVideo) return;
+
+    const handleCanPlay = () => {
+      setVideoLoaded(true);
+    };
+
+    const handleError = () => {
+      setVideoError(true);
+      console.warn('Video failed to load, falling back to image');
+    };
+
+    video.addEventListener('canplay', handleCanPlay);
+    video.addEventListener('error', handleError);
+
+    return () => {
+      video.removeEventListener('canplay', handleCanPlay);
+      video.removeEventListener('error', handleError);
+    };
+  }, [backgroundVideo]);
+
+  // Determine if we should show video or image
+  const showVideo = backgroundVideo && !videoError;
+
+  return (
+    <section
+      className="relative w-full h-screen min-h-[500px] sm:min-h-[550px] md:min-h-[600px] overflow-hidden"
+      aria-label="Hero section"
+    >
+      {/* Background Image - Your cattle ranch image with dimmed overlay */}
+      <div
+        className={`absolute inset-0 transition-opacity duration-500 bg-gradient-to-br from-primary-800 to-primary-900 ${
+          showVideo && videoLoaded ? 'opacity-0' : 'opacity-100'
+        }`}
+      >
+        <Image
+          src="/images/hero-cattle-ranch.jpg?v=3"
+          alt="F&G Meats - Premium cattle ranch with mountains"
+          fill
+          priority // Preload for <3s load time (Requirement 2.6)
+          quality={90}
+          sizes="100vw"
+          className="object-cover object-center"
+          placeholder="blur"
+          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUH/8QAIhAAAgEDAwUBAAAAAAAAAAAAAQIDAAQRBRIhBhMiMUFR/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAZEQACAwEAAAAAAAAAAAAAAAABAgADESH/2gAMAwEAAhEDEEA/AKOm6Xp9xYW8s1jbSSPGrM7RKSxI5JJHJqfqGi6ZHp91JHp1ojrC7KywqCCFJBBx7pSqVYqxBJxLLuf/2Q=="
+          onError={(e) => {
+            // Fallback to a solid color background if image fails
+            const target = e.target as HTMLImageElement;
+            target.style.display = 'none';
+          }}
+        />
+      </div>
+
+      {/* Background Video - Optional, with image fallback */}
+      {showVideo && (
+        <div
+          className={`absolute inset-0 transition-opacity duration-500 ${
+            videoLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
+          <video
+            ref={videoRef}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            className="absolute inset-0 w-full h-full object-cover object-center"
+            aria-hidden="true"
+          >
+            <source src={backgroundVideo} type="video/mp4" />
+            {/* Browser doesn't support video tag - image fallback handles this */}
+          </video>
+        </div>
+      )}
+
+      {/* Dimmed Overlay - PowerPoint style dimming effect */}
+      <div
+        className="absolute inset-0 bg-black/40"
+        aria-hidden="true"
+      />
+
+      {/* Content Container - Centered headline only with responsive spacing */}
+      <div className="relative z-10 h-full flex flex-col items-center justify-center px-5 sm:px-6 lg:px-8 py-16 sm:py-20 text-center max-w-4xl mx-auto">
+        {/* Headline - Large, impactful typography with font-heading (Playfair Display) */}
+        {/* Responsive scaling: 2.5rem (40px) mobile -> 3rem (48px) sm -> 3.75rem (60px) lg */}
+        <h1 className="font-heading text-[2.5rem] leading-[1.1] sm:text-5xl sm:leading-tight lg:text-6xl text-neutral-100 mb-4 sm:mb-6">
+          {headline}
+        </h1>
+        
+        {/* Subheadline - Only show if provided */}
+        {subheadline && (
+          <p className="font-body text-base leading-relaxed sm:text-xl lg:text-2xl text-neutral-200 mb-6 sm:mb-8 max-w-[90%] sm:max-w-2xl">
+            {subheadline}
+          </p>
+        )}
+        
+        {/* Primary CTA Button - Only show if provided */}
+        {ctaText && ctaHref && (
+          <Button
+            href={ctaHref}
+            variant="primary"
+            size="lg"
+            className="shadow-lg hover:shadow-xl w-full xs:w-auto max-w-[280px] sm:max-w-none min-h-[52px] text-base sm:text-lg"
+          >
+            {ctaText}
+          </Button>
+        )}
+      </div>
+    </section>
+  );
+}
