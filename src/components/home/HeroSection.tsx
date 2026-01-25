@@ -88,7 +88,7 @@ export default function HeroSection({
 
   return (
     <section
-      className="relative w-full h-screen min-h-screen overflow-hidden"
+      className="relative w-full h-[100dvh] min-h-[500px] sm:min-h-[550px] lg:min-h-[600px] overflow-hidden"
       aria-label="Hero section"
     >
       {/* Hero Banner Background Image */}

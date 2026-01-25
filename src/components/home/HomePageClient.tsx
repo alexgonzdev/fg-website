@@ -41,7 +41,7 @@ function FullSection({
   return (
     <section 
       ref={sectionRef}
-      className={`relative h-screen min-h-screen flex items-center justify-center snap-start snap-always ${className}`}
+      className={`relative h-[100dvh] min-h-[600px] flex items-center justify-center snap-start snap-always overflow-hidden ${className}`}
     >
       <div className="absolute inset-0 z-0">
         <Image
@@ -97,27 +97,27 @@ function HeroWithVerticalImages({
   return (
     <section 
       ref={sectionRef}
-      className="relative h-screen min-h-screen flex items-center justify-center snap-start snap-always bg-neutral-950 overflow-hidden"
+      className="relative h-[100dvh] min-h-[600px] flex items-center justify-center snap-start snap-always bg-neutral-950 overflow-hidden"
     >
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-neutral-900 via-neutral-950 to-black" />
       
       {/* Content wrapper */}
-      <div className="relative z-10 w-full h-full flex flex-col lg:flex-row items-center justify-center px-6 sm:px-8 lg:px-16 xl:px-24 py-12 gap-8 lg:gap-16">
+      <div className="relative z-10 w-full h-full flex flex-col lg:flex-row items-center justify-center px-6 sm:px-8 lg:px-12 xl:px-16 py-12 gap-6 lg:gap-10 max-w-[100vw] overflow-hidden box-border">
         
         {/* Text content - left side on desktop, top on mobile */}
-        <div className={`flex-shrink-0 text-center lg:text-left lg:w-[38%] xl:w-[32%] transition-all duration-1000 delay-300 ${
+        <div className={`flex-shrink-0 text-center lg:text-left lg:max-w-[400px] xl:max-w-[450px] transition-all duration-1000 delay-300 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
           {children}
         </div>
         
         {/* 3 Vertical Images - right side on desktop, bottom on mobile */}
-        <div className="flex gap-4 sm:gap-5 lg:gap-6 h-[50vh] sm:h-[55vh] lg:h-[80vh] max-h-[550px] lg:max-h-[700px]">
+        <div className="flex gap-3 sm:gap-4 lg:gap-5 h-[45vh] sm:h-[50vh] lg:h-[70vh] max-h-[500px] lg:max-h-[600px] flex-shrink-0">
           {images.map((image, index) => (
             <div 
               key={index}
-              className={`relative w-[30vw] sm:w-[28vw] lg:w-[22vw] xl:w-[18vw] h-full overflow-hidden rounded-xl sm:rounded-2xl shadow-2xl transition-all duration-700 ${
+              className={`relative w-24 sm:w-32 lg:w-40 xl:w-44 h-full overflow-hidden rounded-xl sm:rounded-2xl shadow-2xl transition-all duration-700 ${
                 isVisible 
                   ? 'opacity-100 translate-y-0' 
                   : 'opacity-0 translate-y-12'
@@ -135,7 +135,7 @@ function HeroWithVerticalImages({
                 alt={image.alt}
                 fill
                 quality={90}
-                sizes="(max-width: 768px) 28vw, (max-width: 1024px) 22vw, 16vw"
+                sizes="(max-width: 640px) 96px, (max-width: 1024px) 128px, 176px"
                 className="object-cover hover:scale-105 transition-transform duration-700"
                 priority={index === 0}
               />
@@ -204,7 +204,7 @@ export default function HomePageClient() {
   ];
 
   return (
-    <main className="h-screen overflow-y-scroll snap-y snap-mandatory">
+    <main className="h-[100dvh] overflow-y-scroll overflow-x-hidden snap-y snap-mandatory">
       {/* Hero Section - 3 Vertical Images Layout */}
       <HeroWithVerticalImages images={heroImages}>
         <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-4 lg:mb-6 tracking-wide leading-tight">
