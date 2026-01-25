@@ -65,6 +65,99 @@ function FullSection({
 }
 
 /**
+ * Hero section with 3 vertical images layout
+ */
+function HeroWithVerticalImages({
+  images,
+  children,
+}: {
+  images: { src: string; alt: string }[];
+  children: React.ReactNode;
+}) {
+  const sectionRef = useRef<HTMLElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <section 
+      ref={sectionRef}
+      className="relative h-screen min-h-screen flex items-center justify-center snap-start snap-always bg-neutral-950 overflow-hidden"
+    >
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-neutral-900 via-neutral-950 to-black" />
+      
+      {/* Content wrapper */}
+      <div className="relative z-10 w-full h-full flex flex-col lg:flex-row items-center justify-center px-6 sm:px-8 lg:px-16 xl:px-24 py-12 gap-8 lg:gap-16">
+        
+        {/* Text content - left side on desktop, top on mobile */}
+        <div className={`flex-shrink-0 text-center lg:text-left lg:w-[38%] xl:w-[32%] transition-all duration-1000 delay-300 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}>
+          {children}
+        </div>
+        
+        {/* 3 Vertical Images - right side on desktop, bottom on mobile */}
+        <div className="flex gap-4 sm:gap-5 lg:gap-6 h-[50vh] sm:h-[55vh] lg:h-[80vh] max-h-[550px] lg:max-h-[700px]">
+          {images.map((image, index) => (
+            <div 
+              key={index}
+              className={`relative w-[30vw] sm:w-[28vw] lg:w-[22vw] xl:w-[18vw] h-full overflow-hidden rounded-xl sm:rounded-2xl shadow-2xl transition-all duration-700 ${
+                isVisible 
+                  ? 'opacity-100 translate-y-0' 
+                  : 'opacity-0 translate-y-12'
+              }`}
+              style={{ 
+                transitionDelay: `${0.2 + index * 0.15}s`,
+              }}
+            >
+              {/* Decorative frame effect */}
+              <div className="absolute inset-0 border-2 border-white/10 rounded-xl sm:rounded-2xl z-20 pointer-events-none" />
+              
+              {/* Image */}
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                quality={90}
+                sizes="(max-width: 768px) 28vw, (max-width: 1024px) 22vw, 16vw"
+                className="object-cover hover:scale-105 transition-transform duration-700"
+                priority={index === 0}
+              />
+              
+              {/* Subtle gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10 z-10" />
+            </div>
+          ))}
+        </div>
+      </div>
+      
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 sm:bottom-10 left-1/2 -translate-x-1/2 animate-bounce z-20">
+        <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
+      </div>
+    </section>
+  );
+}
+
+/**
  * Staggered animation wrapper for content within sections
  */
 function AnimatedContent({ 
@@ -103,35 +196,29 @@ function CTAButton({ href, children }: { href: string; children: React.ReactNode
 }
 
 export default function HomePageClient() {
+  // Hero images - 3 vertical images for the hero section
+  const heroImages = [
+    { src: '/images/meat/WhatsApp Image 2026-01-25 at 13.35.38.jpeg', alt: 'Premium beef cuts' },
+    { src: '/images/meat/WhatsApp Image 2026-01-25 at 13.35.38 (1).jpeg', alt: 'Quality meat selection' },
+    { src: '/images/meat/WhatsApp Image 2026-01-25 at 13.35.38 (2).jpeg', alt: 'Specialty meats' },
+  ];
+
   return (
     <main className="h-screen overflow-y-scroll snap-y snap-mandatory">
-      {/* Hero Section - "TRADITION MEATS TOMORROW" style */}
-      <FullSection 
-        backgroundImage="/images/herohomepic.jpeg"
-        overlay="bg-black/40"
-      >
-        <div className="text-center px-6 max-w-5xl mx-auto">
-          <AnimatedContent delay={0.2}>
-            <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white mb-6 tracking-wide">
-              THE ART OF
-            </h1>
-            <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white tracking-wide">
-              BEEF BUYING
-            </h1>
-          </AnimatedContent>
-          <AnimatedContent delay={0.6}>
-            <p className="mt-8 text-lg sm:text-xl text-white/90 max-w-2xl mx-auto font-light">
-              Premium proteins for Florida&apos;s finest establishments
-            </p>
-          </AnimatedContent>
-        </div>
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <svg className="w-6 h-6 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
-        </div>
-      </FullSection>
+      {/* Hero Section - 3 Vertical Images Layout */}
+      <HeroWithVerticalImages images={heroImages}>
+        <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-4 lg:mb-6 tracking-wide leading-tight">
+          THE ART OF
+          <br />
+          <span className="text-amber-400">BEEF BUYING</span>
+        </h1>
+        <p className="text-base sm:text-lg lg:text-xl text-white/80 max-w-md mx-auto lg:mx-0 font-light mb-6 lg:mb-8">
+          Premium proteins for Florida&apos;s finest establishments
+        </p>
+        <CTAButton href="/contact">
+          Get Started
+        </CTAButton>
+      </HeroWithVerticalImages>
 
       {/* Our Legacy Section */}
       <FullSection 
