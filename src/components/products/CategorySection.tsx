@@ -106,9 +106,10 @@ export default function CategorySection({
     >
       <div className="container mx-auto px-4 md:px-6">
         {/* Category Header */}
-        <div className="mb-8 md:mb-10">
+        <div className="mb-8 md:mb-10 text-center">
           {/* Category Name with Accent Divider */}
-          <div className="flex items-center gap-4 mb-4">
+          <div className="flex items-center justify-center gap-4 mb-4">
+            <div className="flex-1 h-px bg-gradient-to-l from-accent-500 to-transparent" />
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-neutral-100">
               {categoryName}
             </h2>
@@ -117,7 +118,7 @@ export default function CategorySection({
           </div>
 
           {/* Category Description */}
-          <p className="text-neutral-300 text-lg md:text-xl max-w-2xl">
+          <p className="text-neutral-300 text-lg md:text-xl max-w-2xl text-center mx-auto">
             {description}
           </p>
         </div>

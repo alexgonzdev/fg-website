@@ -21,49 +21,21 @@ export default function SpecialtyPoultryProgramPage() {
       {/* Products Grid */}
       <div className="py-20 lg:py-32">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20">
+          <div className="grid grid-cols-1 gap-16 lg:gap-20 max-w-md mx-auto">
             
-            {/* Culver/Dr. Joes */}
-            <div className="group">
-              <div className="aspect-[4/3] bg-gradient-to-br from-neutral-800 to-neutral-900 rounded-lg mb-8 overflow-hidden">
-                <div className="w-full h-full flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-20 h-20 bg-accent-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-accent-500 text-2xl font-bold">DJ</span>
-                    </div>
-                    <p className="text-neutral-400 text-sm">Premium Duck</p>
-                  </div>
-                </div>
-              </div>
-              <div className="space-y-4">
-                <h2 className="font-heading text-2xl lg:text-3xl text-neutral-100 text-center">Culver/Dr. Joes</h2>
-                <p className="text-neutral-300 text-lg leading-relaxed text-center">
-                  Domestic Duck
-                </p>
-                <div className="pt-2 text-center">
-                  <a href="/programs/specialty-poultry/culver-dr-joes" className="text-accent-500 hover:text-accent-400 transition-colors font-medium">
-                    Learn More →
-                  </a>
-                </div>
-              </div>
-            </div>
-
             {/* Palmetto Farms */}
             <div className="group">
-              <div className="aspect-[4/3] bg-gradient-to-br from-neutral-800 to-neutral-900 rounded-lg mb-8 overflow-hidden">
-                <div className="w-full h-full flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-20 h-20 bg-accent-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-accent-500 text-2xl font-bold">PF</span>
-                    </div>
-                    <p className="text-neutral-400 text-sm">Specialty Birds</p>
-                  </div>
-                </div>
+              <div className="aspect-[4/3] bg-white rounded-lg mb-8 overflow-hidden flex items-center justify-center p-8">
+                <img 
+                  src="/images/Screenshot_25-1-2026_141236_www.fpwmeats.com.jpeg" 
+                  alt="Palmetto Farms Logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div className="space-y-4">
                 <h2 className="font-heading text-2xl lg:text-3xl text-neutral-100 text-center">Palmetto Farms</h2>
                 <p className="text-neutral-300 text-lg leading-relaxed text-center">
-                  Domestic Poussin/Squab
+                  Domestic Poussin/Squab/Cornish Hen
                 </p>
                 <div className="pt-2 text-center">
                   <a href="/programs/specialty-poultry/palmetto-farms" className="text-accent-500 hover:text-accent-400 transition-colors font-medium">

@@ -13,7 +13,7 @@ export default function RRRanchPage() {
       {/* Full Page Background Image */}
       <div className="fixed inset-0 z-0">
         <Image
-          src="/images/Screenshot_23-1-2026_18219_.jpeg"
+          src="/images/Screenshot_25-1-2026_214216_www.agribeef.com.jpeg"
           alt="RR Ranch Background"
           fill
           className="object-cover"
@@ -34,21 +34,21 @@ export default function RRRanchPage() {
               RR Ranch
             </h1>
             
+            {/* Logo */}
+            <div className="max-w-xs mx-auto mb-8">
+              <div className="bg-white rounded-lg p-6">
+                <img 
+                  src="/images/DRR Stacked Logo.jpg" 
+                  alt="Double R Ranch Logo"
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+            </div>
+            
             {/* Brief Summary */}
             <p className="font-body text-xl sm:text-2xl text-neutral-200 leading-relaxed mb-8 max-w-2xl mx-auto drop-shadow-lg">
               Northwest beef program delivering consistent marbling and clean flavor through controlled grain-finishing and full processing oversight.
             </p>
-            
-            {/* Inquire Now Button */}
-            <a 
-              href="/contact" 
-              className="inline-flex items-center px-10 py-4 bg-accent-500 text-primary-900 font-semibold text-lg rounded-lg hover:bg-accent-400 transition-all duration-300 shadow-lg hover:shadow-accent-500/50 hover:scale-105"
-            >
-              Inquire Now
-              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </a>
           </div>
         </div>
       </div>
@@ -97,6 +97,19 @@ export default function RRRanchPage() {
                     quality={90}
                   />
                 </div>
+              </div>
+
+              {/* Inquire Button */}
+              <div className="pt-8">
+                <a 
+                  href="/contact" 
+                  className="inline-flex items-center gap-2 bg-accent-500 hover:bg-accent-600 text-primary-900 font-semibold px-8 py-4 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  Inquire About RR Ranch
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
               </div>
             </div>
           </div>

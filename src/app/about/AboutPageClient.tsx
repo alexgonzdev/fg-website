@@ -4,7 +4,6 @@ import AnimatedSection from '@/components/ui/AnimatedSection';
 import Button from '@/components/ui/Button';
 import CompanyStory, { COMPANY_STORY_DATA } from '@/components/about/CompanyStory';
 import MissionValues, { MISSION_VALUES_DATA } from '@/components/about/MissionValues';
-import TeamSection, { TEAM_SECTION_DATA } from '@/components/about/TeamSection';
 import { MessageSquare, Phone } from 'lucide-react';
 
 /**
@@ -26,9 +25,7 @@ export default function AboutPageClient() {
             
             {/* Page Description */}
             <p className="text-neutral-300 text-lg md:text-xl leading-relaxed">
-              For over two decades, F&G Meat Distribution has been the trusted partner for 
-              the finest restaurants and hotels across the nation. Discover our story, 
-              our values, and the team behind our commitment to excellence.
+              Founded in 2024, F&G Meats is a young and dynamic distributor of premium proteins, supplying high-quality beef and specialty meats to Florida's leading restaurants, hotels, and country clubs. Built on a foundation of reliability, product variety, and hands-on service, the company operates with a partnership-driven approach focused on making the protein-ordering process seamless, transparent, and effortless for every client.
             </p>
           </div>
         </div>
@@ -44,9 +41,6 @@ export default function AboutPageClient() {
 
       {/* Mission & Values Section */}
       <MissionValues {...MISSION_VALUES_DATA} />
-
-      {/* Leadership Team Section */}
-      <TeamSection {...TEAM_SECTION_DATA} />
 
       {/* Contact CTA Section */}
       <section
@@ -81,9 +75,9 @@ export default function AboutPageClient() {
           {/* Supporting Text */}
           <AnimatedSection animation="fadeIn" delay={0.2}>
             <p className="font-body text-lg sm:text-xl text-neutral-200 leading-relaxed max-w-2xl mx-auto mb-8 sm:mb-10">
-              Join the hundreds of restaurants and hotels that trust F&G for their premium protein needs. 
+              Join the family of restaurants and hotels that trust F&G for their premium protein needs. 
               Our team is ready to discuss how we can serve your establishment with the same dedication 
-              and excellence that has defined us for over 25 years.
+              and excellence that has defined us.
             </p>
           </AnimatedSection>
 

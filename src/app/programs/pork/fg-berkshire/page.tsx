@@ -39,17 +39,6 @@ export default function FGBerkshirePage() {
             <p className="font-body text-xl sm:text-2xl text-neutral-200 leading-relaxed mb-8 max-w-2xl mx-auto drop-shadow-lg">
               Premium heritage Berkshire pork from small family farms, featuring refined genetics and craft-level processing for superior marbling and flavor.
             </p>
-            
-            {/* Inquire Now Button */}
-            <a 
-              href="/contact" 
-              className="inline-flex items-center px-10 py-4 bg-accent-500 text-primary-900 font-semibold text-lg rounded-lg hover:bg-accent-400 transition-all duration-300 shadow-lg hover:shadow-accent-500/50 hover:scale-105"
-            >
-              Inquire Now
-              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </a>
           </div>
         </div>
       </div>
@@ -103,6 +92,19 @@ export default function FGBerkshirePage() {
                     </div>
                   </div>
                 </div>
+              </div>
+
+              {/* Inquire Button */}
+              <div className="pt-8">
+                <a 
+                  href="/contact" 
+                  className="inline-flex items-center gap-2 bg-accent-500 hover:bg-accent-600 text-primary-900 font-semibold px-8 py-4 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  Inquire About F&G Berkshire
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
               </div>
             </div>
           </div>

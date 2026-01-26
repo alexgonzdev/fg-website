@@ -108,10 +108,10 @@ export default function HeroSection({
       </div>
       
       {/* Content Container - Centered headline only with responsive spacing */}
-      <div className="relative z-10 h-full flex flex-col items-center justify-center px-5 sm:px-6 lg:px-8 py-16 sm:py-20 text-center max-w-4xl mx-auto">
+      <div className="relative z-10 h-full flex flex-col items-center justify-center px-5 sm:px-6 lg:px-8 pt-24 pb-16 sm:pt-28 sm:pb-20 text-center max-w-4xl mx-auto">
         {/* Headline - Large, impactful typography with font-heading (Playfair Display) */}
-        {/* Responsive scaling: 2.5rem (40px) mobile -> 3rem (48px) sm -> 3.75rem (60px) lg */}
-        <h1 className="font-heading text-[2.5rem] leading-[1.1] sm:text-5xl sm:leading-tight lg:text-6xl text-neutral-100 mb-4 sm:mb-6">
+        {/* Responsive scaling for better fit on all screens */}
+        <h1 className="font-heading text-3xl leading-tight sm:text-4xl md:text-5xl lg:text-6xl text-neutral-100 mb-4 sm:mb-6">
           {headline}
         </h1>
         

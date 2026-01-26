@@ -26,22 +26,22 @@ export default function BeefProgramPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20">
             
-            {/* St. Helens Beef */}
+            {/* Greater Omaha Packing */}
             <div className="group">
               <div className="aspect-[4/3] bg-white rounded-lg mb-8 overflow-hidden flex items-center justify-center p-8">
                 <img 
-                  src="/images/PremiumAngusBeefLogoB&W.png" 
-                  alt="St. Helens Beef Logo"
+                  src="/images/Screenshot_25-1-2026_133933_www.dropbox.com.jpeg" 
+                  alt="Greater Omaha Packing Logo"
                   className="w-full h-full object-contain"
                 />
               </div>
               <div className="space-y-4">
-                <h2 className="font-heading text-2xl lg:text-3xl text-neutral-100 text-center">St. Helens Beef</h2>
+                <h2 className="font-heading text-2xl lg:text-3xl text-neutral-100 text-center">Greater Omaha Packing</h2>
                 <p className="text-neutral-300 text-lg leading-relaxed text-center">
-                  American Angus Choice
+                  Premium Midwest Angus & Hereford
                 </p>
                 <div className="pt-2 text-center">
-                  <a href="/programs/beef/st-helens" className="text-accent-500 hover:text-accent-400 transition-colors font-medium">
+                  <a href="/programs/beef/greater-omaha" className="text-accent-500 hover:text-accent-400 transition-colors font-medium">
                     Learn More →
                   </a>
                 </div>
@@ -70,22 +70,22 @@ export default function BeefProgramPage() {
               </div>
             </div>
 
-            {/* Snake River Farms */}
+            {/* WinterFrost American Wagyu */}
             <div className="group">
               <div className="aspect-[4/3] bg-white rounded-lg mb-8 overflow-hidden flex items-center justify-center p-8">
                 <img 
-                  src="/images/SRF Logo.jpg" 
-                  alt="Snake River Farms Logo"
+                  src="/images/Screenshot_25-1-2026_14140_www.dropbox.com.jpeg" 
+                  alt="WinterFrost American Wagyu Logo"
                   className="w-full h-full object-contain"
                 />
               </div>
               <div className="space-y-4">
-                <h2 className="font-heading text-2xl lg:text-3xl text-neutral-100 text-center">Snake River Farms</h2>
+                <h2 className="font-heading text-2xl lg:text-3xl text-neutral-100 text-center">WinterFrost</h2>
                 <p className="text-neutral-300 text-lg leading-relaxed text-center">
                   American Wagyu
                 </p>
                 <div className="pt-2 text-center">
-                  <a href="/programs/beef/snake-river-farms" className="text-accent-500 hover:text-accent-400 transition-colors font-medium">
+                  <a href="/programs/beef/winterfrost" className="text-accent-500 hover:text-accent-400 transition-colors font-medium">
                     Learn More →
                   </a>
                 </div>
@@ -96,7 +96,7 @@ export default function BeefProgramPage() {
             <div className="group">
               <div className="aspect-[4/3] bg-white rounded-lg mb-8 overflow-hidden flex items-center justify-center p-8">
                 <img 
-                  src="/images/fnglogo.png" 
+                  src="/images/logo-transparent-black.png" 
                   alt="F&G Meats Wagyu Logo"
                   className="w-full h-full object-contain"
                 />

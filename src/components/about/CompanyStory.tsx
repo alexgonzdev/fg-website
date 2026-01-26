@@ -93,16 +93,6 @@ export default function CompanyStory({
           {/* Text Content */}
           <AnimatedSection animation="slideIn" delay={0.1}>
             <div className="space-y-6">
-              {/* Years Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-700 rounded-full border border-accent-500/30">
-                <span className="font-heading text-2xl text-accent-500 font-semibold">
-                  {yearsInBusiness}+
-                </span>
-                <span className="text-neutral-200 text-sm uppercase tracking-wider">
-                  Years of Excellence
-                </span>
-              </div>
-
               {/* Content Paragraphs */}
               {content.map((paragraph, index) => (
                 <p
@@ -117,7 +107,7 @@ export default function CompanyStory({
 
           {/* Image */}
           <AnimatedSection animation="fadeIn" delay={0.2}>
-            <div className="relative aspect-[4/3] lg:aspect-square rounded-card overflow-hidden border border-neutral-400/20">
+            <div className="relative aspect-[4/3] lg:aspect-square rounded-card overflow-hidden border border-neutral-400/20 bg-neutral-800">
               <Image
                 src={image}
                 alt={`${title} - F&G Meat Distribution`}
@@ -240,36 +230,40 @@ export default function CompanyStory({
 export const COMPANY_STORY_DATA: CompanyStoryProps = {
   title: 'Our Story',
   content: [
-    'F&G Meat Distribution was founded in 1998 with a simple yet ambitious vision: to become the premier supplier of premium proteins to the finest restaurants and hotels across the nation. What started as a small family operation has grown into one of the most trusted names in the B2B meat distribution industry.',
-    'Our founders, with decades of combined experience in the culinary and food service industries, recognized a gap in the market for a distributor that truly understood the needs of discerning chefs. They set out to build relationships with the best ranches and producers, ensuring that every product bearing the F&G name meets the highest standards of quality.',
-    'Today, we proudly serve over 500 restaurant partners, from Michelin-starred establishments to beloved neighborhood bistros. Our commitment to excellence, consistency, and personalized service remains as strong as it was on day one.',
+    'F&G Meats was founded in 2024 with a simple yet ambitious vision: to become the premier supplier of premium proteins to the finest restaurants and hotels across the nation. What began as a focused direct-to-consumer operation quickly evolved into a trusted B2B meat distribution partner, built on quality, transparency, and relationships.',
+    'Our founders bring years of combined experience across the culinary and food service industries and recognized a clear gap in the market—distributors who truly understand the needs of discerning chefs. From day one, we set out to partner with the best ranches and producers, ensuring every product carrying the F&G name meets uncompromising standards of quality and consistency.',
+    'Today, we proudly serve some of Miami\'s most respected restaurant partners, from award-winning chefs to beloved neighborhood bistros. Our commitment to excellence, reliability, and personalized service remains exactly as it was on day one—and continues to guide everything we do.',
   ],
-  foundingYear: 1998,
+  foundingYear: 2024,
   milestones: [
     {
-      year: 1998,
-      description: 'F&G Meat Distribution founded with a focus on premium beef',
+      year: 2024,
+      description: 'F&G Meats founded with a focus on premium proteins',
     },
     {
-      year: 2005,
-      description: 'Expanded product line to include Wagyu and specialty proteins',
+      year: 2024,
+      description: 'Distributed commodity and Argentine beef in South Florida',
     },
     {
-      year: 2010,
-      description: 'Reached 100 restaurant partners milestone',
+      year: 2025,
+      description: 'Partnered with top producers to expand offerings',
     },
     {
-      year: 2015,
-      description: 'Launched sustainable seafood program with Patagonian Sea',
+      year: 2025,
+      description: 'Launched F&G Meats Wagyu and Berkshire lines out of the Midwest',
     },
     {
-      year: 2020,
-      description: 'Expanded distribution network to serve nationwide',
+      year: 2025,
+      description: 'Partnered with South Florida elite like Amazonico, Forte Dei Marmi, Maison Ostrow and more!',
     },
     {
-      year: 2023,
-      description: 'Celebrated 25 years of excellence with 500+ partners',
+      year: 2026,
+      description: 'Onboarded exotic programs like Kosher Wagyu and Vaca Vieja Galician style to further expand offerings',
+    },
+    {
+      year: 2026,
+      description: 'Currently working tirelessly to source from the world\'s top producers and make beef buying a pleasure',
     },
   ],
-  image: 'https://placehold.co/800x800/2a2a2a/c9a962?text=Our+Story',
+  image: '/images/our story pic  olivia .jpeg',
 };

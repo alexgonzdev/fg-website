@@ -2,128 +2,315 @@
 
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import Button from '@/components/ui/Button';
-import CategorySection from '@/components/products/CategorySection';
-import { PRODUCT_CATEGORIES, getBrandsByCategory, ProductCategory } from '@/lib/constants';
 import { MessageSquare, Phone } from 'lucide-react';
 
 /**
- * Products Page Client Component
+ * Products Page Client Component - Combined Programs View
  * 
- * Client-side component for the Products & Brands page with animations and interactivity.
- * 
- * Requirements Addressed:
- * - Requirement 5.1: Organizes products into clear categories
- * - Requirement 5.2: Displays associated brand information for each category
- * - Requirement 5.3: Displays beef brands (Snake River Farms, Double R Ranch, St. Helens Beef)
- * - Requirement 5.4: Displays Casa Wagyu in Wagyu category
- * - Requirement 5.5: Displays Culver Duck and Tasty Duck in Duck category
- * - Requirement 5.6: Displays Patagonian Sea in Seafood category
- * - Requirement 5.8: Includes high-quality imagery for each category and brand
- * - Requirement 5.9: Includes a CTA encouraging visitors to inquire about specific products
+ * Displays all protein programs (Beef, Pork, Specialty Poultry, Exotics) with their brands
  */
 export default function ProductsPageClient() {
-  // Define the order of categories to display (excluding 'other' which has no brands)
-  const categoryOrder: ProductCategory[] = ['beef', 'wagyu', 'duck', 'seafood'];
-
   return (
-    <main className="min-h-screen bg-primary-900">
+    <main className="min-h-screen bg-primary-900 bg-cover bg-center bg-no-repeat bg-fixed relative" style={{ backgroundImage: "url('/images/OUR SERVICES .jpeg')" }}>
+      {/* Dark overlay for entire page */}
+      <div className="absolute inset-0 bg-primary-900/85" />
+
       {/* Page Header */}
-      <AnimatedSection animation="fadeIn" className="pt-32 pb-12 md:pt-40 md:pb-16">
+      <AnimatedSection animation="fadeIn" className="pt-32 pb-12 md:pt-40 md:pb-16 relative z-10">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto text-center">
-            {/* Page Title */}
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-100 mb-6">
-              Our Premium Products & Brands
+              Our Premium Meats
             </h1>
-            
-            {/* Page Description */}
             <p className="text-neutral-300 text-lg md:text-xl leading-relaxed">
-              F&G partners with the finest producers to bring exceptional quality proteins to your establishment. 
-              Explore our curated selection of premium beef, wagyu, duck, and sustainable seafood from 
-              industry-leading brands.
+              F&G Meats partners with leading ranches and producers across the U.S. and abroad to bring carefully selected, premium beef, heritage pork, and specialty proteins to chefs, retailers, and customers nationwide.
             </p>
           </div>
         </div>
       </AnimatedSection>
 
       {/* Decorative Divider */}
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="h-px bg-gradient-to-r from-transparent via-accent-500 to-transparent" />
       </div>
 
-      {/* Category Sections */}
-      <div className="space-y-8 md:space-y-12">
-        {categoryOrder.map((categoryKey) => {
-          const category = PRODUCT_CATEGORIES[categoryKey];
-          const brands = getBrandsByCategory(categoryKey);
+      {/* BEEF PROGRAMS */}
+      <section className="py-16 lg:py-24 relative z-10">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection animation="slideUp">
+            <div className="text-center mb-12">
+              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-neutral-100 mb-4">Beef Programs</h2>
+              <div className="flex justify-center mb-4">
+                <div className="w-24 h-1 bg-accent-500 rounded-full" />
+              </div>
+              <p className="text-neutral-300 text-lg max-w-2xl mx-auto">
+                Partnering with the world's finest ranchers and producers to bring you premium beef selections
+              </p>
+            </div>
+          </AnimatedSection>
 
-          // Skip categories with no brands
-          if (brands.length === 0) {
-            return null;
-          }
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Greater Omaha Packing */}
+            <AnimatedSection animation="fadeIn" delay={0.1}>
+              <div className="group">
+                <div className="aspect-square bg-white rounded-lg mb-4 overflow-hidden flex items-center justify-center p-6">
+                  <img 
+                    src="/images/Screenshot_25-1-2026_133933_www.dropbox.com.jpeg" 
+                    alt="Greater Omaha Packing Logo"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div className="text-center">
+                  <h3 className="font-heading text-xl text-neutral-100 mb-2">Greater Omaha Packing</h3>
+                  <p className="text-neutral-400 text-sm mb-3">Premium Midwest Angus & Hereford</p>
+                  <a href="/programs/beef/greater-omaha" className="text-accent-500 hover:text-accent-400 transition-colors font-medium text-sm">
+                    Learn More →
+                  </a>
+                </div>
+              </div>
+            </AnimatedSection>
 
-          return (
-            <CategorySection
-              key={categoryKey}
-              categoryName={category.name}
-              description={category.description}
-              brands={brands.map((brand) => ({
-                id: brand.id,
-                name: brand.name,
-                category: brand.category,
-                logo: brand.logo,
-                description: brand.description,
-                highlights: brand.highlights,
-                image: brand.image,
-              }))}
-            />
-          );
-        })}
+            {/* RR Ranch */}
+            <AnimatedSection animation="fadeIn" delay={0.2}>
+              <div className="group">
+                <div className="aspect-square bg-white rounded-lg mb-4 overflow-hidden flex items-center justify-center p-6">
+                  <img 
+                    src="/images/DRR Stacked Logo.jpg" 
+                    alt="RR Ranch Logo"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div className="text-center">
+                  <h3 className="font-heading text-xl text-neutral-100 mb-2">RR Ranch</h3>
+                  <p className="text-neutral-400 text-sm mb-3">American Angus Upper Choice/Prime</p>
+                  <a href="/programs/beef/rr-ranch" className="text-accent-500 hover:text-accent-400 transition-colors font-medium text-sm">
+                    Learn More →
+                  </a>
+                </div>
+              </div>
+            </AnimatedSection>
+
+            {/* WinterFrost American Wagyu */}
+            <AnimatedSection animation="fadeIn" delay={0.3}>
+              <div className="group">
+                <div className="aspect-square bg-white rounded-lg mb-4 overflow-hidden flex items-center justify-center p-6">
+                  <img 
+                    src="/images/Screenshot_25-1-2026_14140_www.dropbox.com.jpeg" 
+                    alt="WinterFrost American Wagyu Logo"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div className="text-center">
+                  <h3 className="font-heading text-xl text-neutral-100 mb-2">WinterFrost</h3>
+                  <p className="text-neutral-400 text-sm mb-3">American Wagyu</p>
+                  <a href="/programs/beef/winterfrost" className="text-accent-500 hover:text-accent-400 transition-colors font-medium text-sm">
+                    Learn More →
+                  </a>
+                </div>
+              </div>
+            </AnimatedSection>
+
+            {/* F&G Wagyu */}
+            <AnimatedSection animation="fadeIn" delay={0.4}>
+              <div className="group">
+                <div className="aspect-square bg-white rounded-lg mb-4 overflow-hidden flex items-center justify-center p-6">
+                  <img 
+                    src="/images/logo-transparent-black.png" 
+                    alt="F&G Meats Wagyu Logo"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div className="text-center">
+                  <h3 className="font-heading text-xl text-neutral-100 mb-2">F&G Meats Wagyu</h3>
+                  <p className="text-neutral-400 text-sm mb-3">American Wagyu</p>
+                  <a href="/programs/beef/fg-wagyu" className="text-accent-500 hover:text-accent-400 transition-colors font-medium text-sm">
+                    Learn More →
+                  </a>
+                </div>
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* Divider */}
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
+        <div className="h-px bg-gradient-to-r from-transparent via-neutral-600 to-transparent" />
       </div>
 
+      {/* PORK PROGRAMS */}
+      <section className="py-16 lg:py-24 relative z-10">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection animation="slideUp">
+            <div className="text-center mb-12">
+              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-neutral-100 mb-4">Pork Programs</h2>
+              <div className="flex justify-center mb-4">
+                <div className="w-24 h-1 bg-accent-500 rounded-full" />
+              </div>
+              <p className="text-neutral-300 text-lg max-w-2xl mx-auto">
+                Partnering with the finest heritage breeds and producers to bring you premium pork selections
+              </p>
+            </div>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+            {/* Snake River Farms Kurobuta */}
+            <AnimatedSection animation="fadeIn" delay={0.1}>
+              <div className="group">
+                <div className="aspect-square bg-white rounded-lg mb-4 overflow-hidden flex items-center justify-center p-6">
+                  <img 
+                    src="/images/SRF Logo.jpg" 
+                    alt="Snake River Farms Kurobuta Logo"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div className="text-center">
+                  <h3 className="font-heading text-xl text-neutral-100 mb-2">Snake River Farms</h3>
+                  <p className="text-neutral-400 text-sm mb-3">Kurobuta Pork</p>
+                  <a href="/programs/pork/snake-river-farms-kurobuta" className="text-accent-500 hover:text-accent-400 transition-colors font-medium text-sm">
+                    Learn More →
+                  </a>
+                </div>
+              </div>
+            </AnimatedSection>
+
+            {/* F&G Meats Berkshire */}
+            <AnimatedSection animation="fadeIn" delay={0.2}>
+              <div className="group">
+                <div className="aspect-square bg-white rounded-lg mb-4 overflow-hidden flex items-center justify-center p-6">
+                  <img 
+                    src="/images/logo-transparent-black.png" 
+                    alt="F&G Meats Berkshire Logo"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div className="text-center">
+                  <h3 className="font-heading text-xl text-neutral-100 mb-2">F&G Meats</h3>
+                  <p className="text-neutral-400 text-sm mb-3">Berkshire Pork</p>
+                  <a href="/programs/pork/fg-berkshire" className="text-accent-500 hover:text-accent-400 transition-colors font-medium text-sm">
+                    Learn More →
+                  </a>
+                </div>
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* Divider */}
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
+        <div className="h-px bg-gradient-to-r from-transparent via-neutral-600 to-transparent" />
+      </div>
+
+      {/* SPECIALTY POULTRY PROGRAMS */}
+      <section className="py-16 lg:py-24 relative z-10">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection animation="slideUp">
+            <div className="text-center mb-12">
+              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-neutral-100 mb-4">Specialty Poultry Programs</h2>
+              <div className="flex justify-center mb-4">
+                <div className="w-24 h-1 bg-accent-500 rounded-full" />
+              </div>
+              <p className="text-neutral-300 text-lg max-w-2xl mx-auto">
+                Partnering with the finest specialty poultry producers to bring you premium poultry selections
+              </p>
+            </div>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 gap-8 max-w-sm mx-auto">
+            {/* Palmetto Farms */}
+            <AnimatedSection animation="fadeIn" delay={0.1}>
+              <div className="group">
+                <div className="aspect-square bg-white rounded-lg mb-4 overflow-hidden flex items-center justify-center p-6">
+                  <img 
+                    src="/images/Screenshot_25-1-2026_141236_www.fpwmeats.com.jpeg" 
+                    alt="Palmetto Farms Logo"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div className="text-center">
+                  <h3 className="font-heading text-xl text-neutral-100 mb-2">Palmetto Farms</h3>
+                  <p className="text-neutral-400 text-sm mb-3">Domestic Poussin/Squab/Cornish Hen</p>
+                  <a href="/programs/specialty-poultry/palmetto-farms" className="text-accent-500 hover:text-accent-400 transition-colors font-medium text-sm">
+                    Learn More →
+                  </a>
+                </div>
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* Divider */}
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
+        <div className="h-px bg-gradient-to-r from-transparent via-neutral-600 to-transparent" />
+      </div>
+
+      {/* EXOTICS PROGRAMS */}
+      <section className="py-16 lg:py-24 relative z-10">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection animation="slideUp">
+            <div className="text-center mb-12">
+              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-neutral-100 mb-4">Exotics Programs</h2>
+              <div className="flex justify-center mb-4">
+                <div className="w-24 h-1 bg-accent-500 rounded-full" />
+              </div>
+              <p className="text-neutral-300 text-lg max-w-2xl mx-auto">
+                Partnering with the finest specialty producers to bring you unique culinary experiences
+              </p>
+            </div>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 gap-8 max-w-sm mx-auto">
+            {/* Vintage Beef Co */}
+            <AnimatedSection animation="fadeIn" delay={0.1}>
+              <div className="group">
+                <div className="aspect-square bg-white rounded-lg mb-4 overflow-hidden flex items-center justify-center p-6">
+                  <img 
+                    src="/images/Screenshot_25-1-2026_141713_www.bing.com.jpeg" 
+                    alt="Vintage Beef Co Logo"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div className="text-center">
+                  <h3 className="font-heading text-xl text-neutral-100 mb-2">Vintage Beef Co</h3>
+                  <p className="text-neutral-400 text-sm mb-3">Vaca Vieja/Galiciana</p>
+                  <a href="/programs/exotics/vintage-beef-co" className="text-accent-500 hover:text-accent-400 transition-colors font-medium text-sm">
+                    Learn More →
+                  </a>
+                </div>
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
       {/* Inquiry CTA Section */}
-      <section
-        className="bg-primary-800 py-16 sm:py-20 lg:py-24 mt-8 md:mt-12 relative overflow-hidden"
-        aria-labelledby="inquiry-cta-heading"
-      >
-        {/* Decorative Background Elements */}
-        <div 
-          className="absolute inset-0 opacity-5"
-          aria-hidden="true"
-        >
+      <section className="bg-primary-800/90 py-16 sm:py-20 lg:py-24 relative z-10 overflow-hidden">
+        <div className="absolute inset-0 opacity-5" aria-hidden="true">
           <div className="absolute top-0 left-0 w-96 h-96 bg-accent-500 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent-500 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
         </div>
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          {/* Headline */}
           <AnimatedSection animation="slideUp" delay={0}>
-            <h2
-              id="inquiry-cta-heading"
-              className="font-heading text-3xl sm:text-4xl lg:text-5xl text-neutral-100 mb-4"
-            >
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-neutral-100 mb-4">
               Interested in Our Products?
             </h2>
-            
-            {/* Accent Divider */}
             <div className="flex justify-center mb-6 sm:mb-8">
-              <div className="w-24 h-1 bg-accent-500 rounded-full" aria-hidden="true" />
+              <div className="w-24 h-1 bg-accent-500 rounded-full" />
             </div>
           </AnimatedSection>
 
-          {/* Supporting Text */}
           <AnimatedSection animation="fadeIn" delay={0.2}>
             <p className="font-body text-lg sm:text-xl text-neutral-200 leading-relaxed max-w-2xl mx-auto mb-8 sm:mb-10">
               Have questions about specific products or brands? Our team of experts is ready to help 
-              you find the perfect proteins for your establishment. Whether you&apos;re looking for 
-              premium wagyu, sustainable seafood, or specialty cuts, we&apos;re here to assist.
+              you find the perfect proteins for your establishment.
             </p>
           </AnimatedSection>
 
-          {/* CTA Button */}
           <AnimatedSection animation="slideUp" delay={0.4}>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-              {/* Primary Contact CTA Button */}
               <Button
                 href="/contact"
                 variant="primary"
@@ -132,8 +319,6 @@ export default function ProductsPageClient() {
               >
                 Inquire About Products
               </Button>
-
-              {/* Secondary Phone CTA Button */}
               <Button
                 href="/contact"
                 variant="secondary"
@@ -143,13 +328,6 @@ export default function ProductsPageClient() {
                 Contact Our Team
               </Button>
             </div>
-          </AnimatedSection>
-
-          {/* Additional Supporting Text */}
-          <AnimatedSection animation="fadeIn" delay={0.6}>
-            <p className="font-body text-sm sm:text-base text-neutral-400 mt-8 sm:mt-10">
-              We offer personalized consultations to help you select the best products for your menu.
-            </p>
           </AnimatedSection>
         </div>
       </section>

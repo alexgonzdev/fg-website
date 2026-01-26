@@ -50,15 +50,12 @@ export default function PorkProgramPage() {
 
             {/* F&G Meats Berkshire */}
             <div className="group">
-              <div className="aspect-[4/3] bg-gradient-to-br from-neutral-800 to-neutral-900 rounded-lg mb-8 overflow-hidden">
-                <div className="w-full h-full flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-20 h-20 bg-accent-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-accent-500 text-2xl font-bold">F&G</span>
-                    </div>
-                    <p className="text-neutral-400 text-sm">Heritage Berkshire</p>
-                  </div>
-                </div>
+              <div className="aspect-[4/3] bg-white rounded-lg mb-8 overflow-hidden flex items-center justify-center p-8">
+                <img 
+                  src="/images/logo-transparent-black.png" 
+                  alt="F&G Meats Berkshire Logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div className="space-y-4">
                 <h2 className="font-heading text-2xl lg:text-3xl text-neutral-100 text-center">F&G Meats</h2>

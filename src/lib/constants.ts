@@ -13,14 +13,12 @@ export interface NavLink {
 // Navigation links - Home removed as logo acts as home button
 export const NAV_LINKS: NavLink[] = [
   { 
+    label: 'Our Legacy', 
+    href: '/about',
+  },
+  { 
     label: 'Programs', 
-    href: '/programs',
-    dropdown: [
-      { label: 'Beef', href: '/programs/beef' },
-      { label: 'Pork', href: '/programs/pork' },
-      { label: 'Specialty Poultry', href: '/programs/specialty-poultry' },
-      { label: 'Exotics', href: '/programs/exotics' },
-    ]
+    href: '/products',
   },
   { 
     label: 'Catalogs', 

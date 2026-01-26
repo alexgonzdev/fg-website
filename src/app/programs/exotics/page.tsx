@@ -25,15 +25,12 @@ export default function ExoticsProgramPage() {
             
             {/* Vintage Beef Co */}
             <div className="group max-w-md mx-auto">
-              <div className="aspect-[4/3] bg-gradient-to-br from-neutral-800 to-neutral-900 rounded-lg mb-8 overflow-hidden">
-                <div className="w-full h-full flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-20 h-20 bg-accent-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-accent-500 text-2xl font-bold">VBC</span>
-                    </div>
-                    <p className="text-neutral-400 text-sm">Aged Beef Excellence</p>
-                  </div>
-                </div>
+              <div className="aspect-[4/3] bg-white rounded-lg mb-8 overflow-hidden flex items-center justify-center p-8">
+                <img 
+                  src="/images/Screenshot_25-1-2026_141713_www.bing.com.jpeg" 
+                  alt="Vintage Beef Co Logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div className="space-y-4">
                 <h2 className="font-heading text-2xl lg:text-3xl text-neutral-100 text-center">Vintage Beef Co</h2>
