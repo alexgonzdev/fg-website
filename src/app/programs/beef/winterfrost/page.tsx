@@ -30,7 +30,7 @@ export default function WinterFrostPage() {
           </div>
           
           <p className="font-body text-xl sm:text-2xl text-neutral-200 leading-relaxed max-w-3xl mx-auto drop-shadow-lg">
-            American Wagyu Beef — 100% Tajima Black Wagyu lineage delivering buttery, beefy, fork-tender excellence.
+            100% Tajima Black Wagyu genetics. Born and raised in the USA. Buttery, beefy, fork-tender.
           </p>
         </div>
       </div>
@@ -40,35 +40,35 @@ export default function WinterFrostPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <p className="font-body text-lg sm:text-xl text-neutral-200 leading-relaxed max-w-4xl mx-auto drop-shadow-lg">
-              WinterFrost breeds select American cattle with Tajima Kuroge Washu bulls — the gold standard of Black Wagyu from Japan. Born and raised in the United States, their cattle are fed premium, vegetarian, whole grains and are never given growth promotants or hormones of any kind.
+              WinterFrost crosses American cattle with Tajima Kuroge Washu bulls—the gold standard of Japanese Black Wagyu. Fed premium vegetarian whole grains, never given hormones or growth promotants. Pure genetics, clean production.
             </p>
           </div>
 
           {/* Key Features */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             <div className="bg-primary-900/60 backdrop-blur-sm rounded-lg p-8 border border-accent-500/20 text-center">
-              <h3 className="font-heading text-2xl text-accent-500 mb-4">100% Tajima Lineage</h3>
-              <p className="text-neutral-200">Bred from Tajima Black Wagyu bulls — the legendary bloodline prized for extraordinary intramuscular marbling.</p>
+              <h3 className="font-heading text-2xl text-accent-500 mb-4">Tajima Bloodline</h3>
+              <p className="text-neutral-200">The legendary Japanese genetics prized for extraordinary intramuscular marbling. No compromises on lineage.</p>
             </div>
 
             <div className="bg-primary-900/60 backdrop-blur-sm rounded-lg p-8 border border-accent-500/20 text-center">
-              <h3 className="font-heading text-2xl text-accent-500 mb-4">Born & Raised USA</h3>
-              <p className="text-neutral-200">American cattle fed premium vegetarian whole grains with zero hormones or growth promotants.</p>
+              <h3 className="font-heading text-2xl text-accent-500 mb-4">American Raised</h3>
+              <p className="text-neutral-200">Born here, fed here. Premium vegetarian grains, zero hormones, zero growth promotants.</p>
             </div>
 
             <div className="bg-primary-900/60 backdrop-blur-sm rounded-lg p-8 border border-accent-500/20 text-center">
-              <h3 className="font-heading text-2xl text-accent-500 mb-4">BMS 6-8 Grade</h3>
-              <p className="text-neutral-200">Single-tiered grading system ensuring consistent, exceptional quality with intricate marbling patterns.</p>
+              <h3 className="font-heading text-2xl text-accent-500 mb-4">BMS 6-8</h3>
+              <p className="text-neutral-200">Single-tier grading. Consistent marbling, consistent quality, every cut.</p>
             </div>
           </div>
 
           {/* Quality Standards */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             <div className="space-y-6">
-              <h2 className="font-heading text-3xl lg:text-4xl text-neutral-100">Raise Your Expectations</h2>
+              <h2 className="font-heading text-3xl lg:text-4xl text-neutral-100">Predictable Excellence</h2>
               <div className="space-y-4 text-neutral-200">
-                <p>WinterFrost delivers American Wagyu's exceptional flavor and quality with unparalleled predictability. Their breeding program harnesses the superior qualities of 100% Tajima Black Wagyu bloodlines, creating luxurious beef that is buttery, beefy, and tender.</p>
-                <p>Produced within Greater Omaha's facility — a name recognized worldwide since 1920 for the finest quality beef — WinterFrost continues their storied legacy with a premium American Wagyu product.</p>
+                <p>WinterFrost delivers what other Wagyu programs can't: consistency. Their breeding program harnesses 100% Tajima genetics to produce beef that's buttery, beefy, and reliably tender—every time.</p>
+                <p>Processed at Greater Omaha's facility, a name that's meant quality since 1920. The partnership combines heritage genetics with world-class processing.</p>
               </div>
               <div className="pt-4">
                 <a 
@@ -85,16 +85,16 @@ export default function WinterFrostPage() {
 
             <div className="space-y-6">
               <div className="bg-primary-900/60 backdrop-blur-sm rounded-lg p-6 border border-accent-500/20">
-                <h3 className="font-heading text-xl text-accent-500 mb-3">On-Site Validation</h3>
-                <p className="text-neutral-300">Expert authorization with breed verification: Tajima Wagyu + predominantly Jersey. Premium A-maturity cattle that are age and source verified.</p>
+                <h3 className="font-heading text-xl text-accent-500 mb-3">Verified Genetics</h3>
+                <p className="text-neutral-300">Expert breed verification: Tajima Wagyu crossed with predominantly Jersey. A-maturity cattle, age and source verified.</p>
               </div>
               <div className="bg-primary-900/60 backdrop-blur-sm rounded-lg p-6 border border-accent-500/20">
-                <h3 className="font-heading text-xl text-accent-500 mb-3">Predictive Technology</h3>
-                <p className="text-neutral-300">Cattle are preselected for size, genetics, and marbling using ultrasound predictive technology not seen elsewhere in the industry.</p>
+                <h3 className="font-heading text-xl text-accent-500 mb-3">Ultrasound Selection</h3>
+                <p className="text-neutral-300">Cattle preselected for size, genetics, and marbling using predictive ultrasound technology. Science-backed selection.</p>
               </div>
               <div className="bg-primary-900/60 backdrop-blur-sm rounded-lg p-6 border border-accent-500/20">
-                <h3 className="font-heading text-xl text-accent-500 mb-3">Optimally Sized Cuts</h3>
-                <p className="text-neutral-300">Precision cattle production means primals are only available in the most preferred weights — perfect for plating the ideal thick-cut steak.</p>
+                <h3 className="font-heading text-xl text-accent-500 mb-3">Perfect Sizing</h3>
+                <p className="text-neutral-300">Precision production means primals in preferred weights only. Ideal for thick-cut steaks, every time.</p>
               </div>
             </div>
           </div>

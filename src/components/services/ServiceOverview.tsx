@@ -169,44 +169,44 @@ export default function ServiceOverview({
  * Use this as default props or for demonstration purposes
  */
 export const SERVICE_OVERVIEW_DATA: ServiceOverviewProps = {
-  title: 'Our Distribution Services',
+  title: 'What We Do',
   description:
-    'F&G Meat Distribution provides comprehensive solutions for premium protein sourcing, ensuring your establishment receives the finest quality products with reliable, temperature-controlled delivery.',
+    'Premium proteins, reliable delivery, and a team that actually picks up the phone. Here\'s how we make it work.',
   services: [
     {
-      title: 'Premium Meat Selection',
+      title: 'Curated Selection',
       description:
-        'Access our curated portfolio of premium beef, wagyu, duck, and seafood from the most trusted producers in the industry. We source only the finest proteins that meet our rigorous quality standards.',
+        'Wagyu, heritage pork, specialty poultry, exotics—sourced from producers we trust. Every program meets our standards before it meets your kitchen.',
       icon: 'beef',
     },
     {
-      title: 'Custom Cut Services',
+      title: 'Custom Cuts',
       description:
-        'Our expert butchers provide precision cutting services tailored to your specifications. From portion-controlled steaks to specialty cuts, we deliver exactly what your kitchen needs.',
+        'Portion-controlled steaks, specialty fabrication, whatever your menu needs. Our butchers cut to your specs, not ours.',
       icon: 'scissors',
     },
     {
-      title: 'Temperature-Controlled Delivery',
+      title: 'Cold Chain Delivery',
       description:
-        'Our state-of-the-art refrigerated fleet maintains optimal temperatures throughout transit, ensuring your products arrive fresh and at peak quality every time.',
+        'Refrigerated trucks, monitored temps, product that arrives the way it left. No excuses, no exceptions.',
       icon: 'snowflake',
     },
     {
-      title: 'Reliable Logistics',
+      title: 'On-Time, Every Time',
       description:
-        'Count on consistent, on-time deliveries with our dedicated logistics team. We understand that timing is critical in the food service industry and plan our routes accordingly.',
+        'We know timing matters. Routes planned around your schedule, not ours. Consistent delivery you can build prep around.',
       icon: 'truck',
     },
     {
-      title: 'Quality Assurance',
+      title: 'Quality Checks',
       description:
-        'Every product undergoes rigorous quality checks before leaving our facility. Our commitment to excellence means you receive only the best, backed by our quality guarantee.',
+        'Every order inspected before it ships. If it doesn\'t meet the standard, it doesn\'t leave the building.',
       icon: 'shield-check',
     },
     {
-      title: 'Dedicated Account Management',
+      title: 'Real Support',
       description:
-        'Work with a dedicated account manager who understands your business needs. From order placement to delivery, you have a single point of contact for personalized service.',
+        'One point of contact who knows your account. Questions, changes, issues—handled by someone who understands your business.',
       icon: 'users',
     },
   ],

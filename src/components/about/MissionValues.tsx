@@ -123,7 +123,7 @@ export default function MissionValues({ mission, values }: MissionValuesProps) {
               </div>
 
               {/* Mission Statement Content */}
-              <div className="bg-primary-700 rounded-card p-8 sm:p-10 lg:p-12 border border-accent-500/20 shadow-card">
+              <div className="bg-transparent rounded-card p-8 sm:p-10 lg:p-12 border border-accent-500/40 backdrop-blur-sm">
                 <h3 className="font-heading text-xl sm:text-2xl text-accent-500 mb-4 text-center">
                   Our Mission
                 </h3>
@@ -205,39 +205,39 @@ export const MISSION_VALUES_DATA: MissionValuesProps = {
     'To deliver exceptional quality proteins to the finest culinary establishments, building lasting partnerships through unwavering commitment to excellence, integrity, and personalized service that exceeds expectations.',
   values: [
     {
-      title: 'Uncompromising Quality',
+      title: 'Quality First',
       description:
-        'We source only the finest proteins from trusted producers who share our commitment to excellence. Every product that bears the F&G name meets the highest standards of quality and freshness.',
+        'We work with producers we trust. If it doesn\'t meet our standards, it doesn\'t ship. Simple as that.',
       icon: 'award',
     },
     {
-      title: 'Trusted Partnerships',
+      title: 'Real Partnerships',
       description:
-        'We believe in building long-term relationships with our clients and suppliers. Our success is measured by the success of the restaurants and establishments we serve.',
+        'Long-term relationships, not transactions. Your success is our success—we mean it.',
       icon: 'handshake',
     },
     {
-      title: 'Integrity First',
+      title: 'Straight Talk',
       description:
-        'Honesty and transparency guide every interaction. From accurate product information to fair pricing, we conduct business with the highest ethical standards.',
+        'Honest product info, fair pricing, no games. We say what we mean and deliver what we promise.',
       icon: 'shield',
     },
     {
-      title: 'Customer Excellence',
+      title: 'Service That Shows',
       description:
-        'We go above and beyond to understand and meet the unique needs of each client. Personalized service and attention to detail set us apart in the industry.',
+        'We learn your operation, anticipate your needs, and solve problems before they become problems.',
       icon: 'star',
     },
     {
-      title: 'Sustainable Practices',
+      title: 'Responsible Sourcing',
       description:
-        'We are committed to environmental responsibility, partnering with producers who prioritize sustainable and ethical practices in their operations.',
+        'We partner with producers who do things right—sustainable practices, ethical treatment, quality genetics.',
       icon: 'leaf',
     },
     {
-      title: 'Reliable Delivery',
+      title: 'Dependable Delivery',
       description:
-        'Our clients depend on us for consistent, on-time delivery. We maintain rigorous logistics standards to ensure products arrive fresh and ready for service.',
+        'On time, every time. Cold chain maintained. Product arrives the way it should.',
       icon: 'truck',
     },
   ],

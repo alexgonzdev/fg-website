@@ -230,19 +230,19 @@ export default function CompanyStory({
 export const COMPANY_STORY_DATA: CompanyStoryProps = {
   title: 'Our Story',
   content: [
-    'F&G Meats was founded in 2024 with a simple yet ambitious vision: to become the premier supplier of premium proteins to the finest restaurants and hotels across the nation. What began as a focused direct-to-consumer operation quickly evolved into a trusted B2B meat distribution partner, built on quality, transparency, and relationships.',
-    'Our founders bring years of combined experience across the culinary and food service industries and recognized a clear gap in the market—distributors who truly understand the needs of discerning chefs. From day one, we set out to partner with the best ranches and producers, ensuring every product carrying the F&G name meets uncompromising standards of quality and consistency.',
-    'Today, we proudly serve some of Miami\'s most respected restaurant partners, from award-winning chefs to beloved neighborhood bistros. Our commitment to excellence, reliability, and personalized service remains exactly as it was on day one—and continues to guide everything we do.',
+    'F&G Meats started with a simple idea: chefs deserve a distributor who actually understands their needs. We saw the gap—too many suppliers focused on volume over quality, logistics over relationships. So we built something different.',
+    'Our founders came from the culinary and food service world. They knew what it meant to need reliable product, consistent specs, and a partner who picks up the phone. From day one, we\'ve worked with the best ranches and producers to ensure every cut meets the standards professional kitchens demand.',
+    'Today, we serve some of Miami\'s most respected restaurants—from award-winning fine dining to neighborhood favorites. The approach hasn\'t changed: quality product, honest service, and partnerships that last.',
   ],
   foundingYear: 2024,
   milestones: [
     {
       year: 2024,
-      description: 'F&G Meats founded with a focus on premium proteins',
+      description: 'F&G Meats founded',
     },
     {
       year: 2024,
-      description: 'Distributed commodity and Argentine beef in South Florida',
+      description: 'Began distributing commodity and Argentine beef in South Florida',
     },
     {
       year: 2025,
@@ -250,19 +250,19 @@ export const COMPANY_STORY_DATA: CompanyStoryProps = {
     },
     {
       year: 2025,
-      description: 'Launched F&G Meats Wagyu and Berkshire lines out of the Midwest',
+      description: 'Launched F&G Wagyu and Berkshire programs from the Midwest',
     },
     {
       year: 2025,
-      description: 'Partnered with South Florida elite like Amazonico, Forte Dei Marmi, Maison Ostrow and more!',
+      description: 'Partnered with Amazonico, Forte Dei Marmi, Maison Ostrow and more',
     },
     {
       year: 2026,
-      description: 'Onboarded exotic programs like Kosher Wagyu and Vaca Vieja Galician style to further expand offerings',
+      description: 'Added exotic programs: Kosher Wagyu, Vaca Vieja Galician style',
     },
     {
       year: 2026,
-      description: 'Currently working tirelessly to source from the world\'s top producers and make beef buying a pleasure',
+      description: 'Sourcing from the world\'s top producers, making beef buying a pleasure',
     },
   ],
   image: '/images/our story pic  olivia .jpeg',

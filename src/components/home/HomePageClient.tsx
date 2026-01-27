@@ -210,7 +210,7 @@ export default function HomePageClient() {
         <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-4 lg:mb-6 tracking-wide leading-tight">
           THE ART OF
           <br />
-          <span className="text-amber-400">BEEF BUYING</span>
+          <span className="text-white">BEEF BUYING</span>
         </h1>
         <p className="text-base sm:text-lg lg:text-xl text-white/80 max-w-md mx-auto lg:mx-0 font-light mb-6 lg:mb-8">
           Premium proteins for Florida&apos;s finest establishments

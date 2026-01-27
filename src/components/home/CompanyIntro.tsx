@@ -47,12 +47,9 @@ export default function CompanyIntro() {
           {/* About Us Content */}
           <div className="text-center">
             <p className="font-body text-lg sm:text-xl text-neutral-200 leading-relaxed max-w-3xl mx-auto">
-              Founded in 2024, F&G Meats is a young and dynamic distributor of premium proteins, 
-              supplying high-quality beef and specialty meats to Florida's leading restaurants, 
-              hotels, and country clubs. Built on a foundation of reliability, product variety, 
-              and hands-on service, the company operates with a partnership-driven approach 
-              focused on making the protein-ordering process seamless, transparent, and 
-              effortless for every client.
+              F&G Meats launched in 2024 with one goal: make premium protein easy for Florida's best kitchens. 
+              We partner with top ranches and producers, handle the logistics, and deliver quality you can count on. 
+              No complexity, no surprises—just great product and real service.
             </p>
           </div>
         </AnimatedSection>

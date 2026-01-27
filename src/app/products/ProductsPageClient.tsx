@@ -44,7 +44,7 @@ export default function ProductsPageClient() {
                 <div className="w-24 h-1 bg-accent-500 rounded-full" />
               </div>
               <p className="text-neutral-300 text-lg max-w-2xl mx-auto">
-                Partnering with the world's finest ranchers and producers to bring you premium beef selections
+                From Midwest Angus to American Wagyu—trusted ranches, consistent quality
               </p>
             </div>
           </AnimatedSection>
@@ -148,7 +148,7 @@ export default function ProductsPageClient() {
                 <div className="w-24 h-1 bg-accent-500 rounded-full" />
               </div>
               <p className="text-neutral-300 text-lg max-w-2xl mx-auto">
-                Partnering with the finest heritage breeds and producers to bring you premium pork selections
+                Heritage Berkshire and Kurobuta—pork with character
               </p>
             </div>
           </AnimatedSection>
@@ -207,12 +207,12 @@ export default function ProductsPageClient() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection animation="slideUp">
             <div className="text-center mb-12">
-              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-neutral-100 mb-4">Specialty Poultry Programs</h2>
+              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-neutral-100 mb-4">Specialty Poultry</h2>
               <div className="flex justify-center mb-4">
                 <div className="w-24 h-1 bg-accent-500 rounded-full" />
               </div>
               <p className="text-neutral-300 text-lg max-w-2xl mx-auto">
-                Partnering with the finest specialty poultry producers to bring you premium poultry selections
+                Traditional breeding, fine dining quality
               </p>
             </div>
           </AnimatedSection>
@@ -251,12 +251,12 @@ export default function ProductsPageClient() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection animation="slideUp">
             <div className="text-center mb-12">
-              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-neutral-100 mb-4">Exotics Programs</h2>
+              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-neutral-100 mb-4">Exotics</h2>
               <div className="flex justify-center mb-4">
                 <div className="w-24 h-1 bg-accent-500 rounded-full" />
               </div>
               <p className="text-neutral-300 text-lg max-w-2xl mx-auto">
-                Partnering with the finest specialty producers to bring you unique culinary experiences
+                Aged beef, rare programs, unforgettable experiences
               </p>
             </div>
           </AnimatedSection>
@@ -304,8 +304,7 @@ export default function ProductsPageClient() {
 
           <AnimatedSection animation="fadeIn" delay={0.2}>
             <p className="font-body text-lg sm:text-xl text-neutral-200 leading-relaxed max-w-2xl mx-auto mb-8 sm:mb-10">
-              Have questions about specific products or brands? Our team of experts is ready to help 
-              you find the perfect proteins for your establishment.
+              Questions about specific products? Want to know more about a program? We're here to help.
             </p>
           </AnimatedSection>
 
