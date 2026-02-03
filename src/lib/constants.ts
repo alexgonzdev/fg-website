@@ -24,7 +24,6 @@ export const NAV_LINKS: NavLink[] = [
     label: 'Catalogs', 
     href: '/catalogs',
     dropdown: [
-      { label: 'Product Catalog', href: '/catalogs/product-catalog' },
       { label: 'Meat Buyers Guide', href: '/catalogs/meat-buyers-guide' },
     ]
   },

@@ -16,22 +16,7 @@ export default function CatalogsPage() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {/* Product Catalog */}
-          <div className="bg-primary-800 p-8 rounded-lg border border-neutral-600 hover:border-accent-500 transition-colors">
-            <h3 className="font-heading text-2xl text-accent-500 mb-4">Product Catalog</h3>
-            <p className="text-neutral-300 mb-6">
-              Browse our complete selection of premium meats, including detailed specifications, 
-              cuts, and availability information for all our product lines.
-            </p>
-            <a 
-              href="/catalogs/product-catalog" 
-              className="inline-block bg-accent-500 text-primary-900 px-6 py-3 rounded-md font-semibold hover:bg-accent-400 transition-colors"
-            >
-              View Product Catalog →
-            </a>
-          </div>
-          
+        <div className="max-w-xl mx-auto">
           {/* Meat Buyers Guide */}
           <div className="bg-primary-800 p-8 rounded-lg border border-neutral-600 hover:border-accent-500 transition-colors">
             <h3 className="font-heading text-2xl text-accent-500 mb-4">Meat Buyers Guide</h3>
