@@ -222,7 +222,7 @@ export default function HomePageClient() {
 
       {/* Our Legacy Section */}
       <FullSection 
-        backgroundImage="/images/wagyu-grazing.jpg"
+        backgroundImage="/images/better quality amazonico opening.jpg"
         overlay="bg-black/60"
       >
         <div className="max-w-4xl mx-auto px-6 text-center">

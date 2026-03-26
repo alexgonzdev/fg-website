@@ -12,7 +12,7 @@ export default function CatalogsPage() {
             Our Catalogs
           </h1>
           <p className="font-body text-lg sm:text-xl text-neutral-200 max-w-3xl mx-auto">
-            Explore our comprehensive product catalogs and meat buying guides
+            Explore our comprehensive meat buying guide
           </p>
         </div>
         
