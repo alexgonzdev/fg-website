@@ -265,5 +265,5 @@ export const COMPANY_STORY_DATA: CompanyStoryProps = {
       description: 'Sourcing from the world\'s top producers, making beef buying a pleasure',
     },
   ],
-  image: '/images/our story pic  olivia .jpeg',
+  image: '/images/better quality amazonico opening.jpg',
 };
